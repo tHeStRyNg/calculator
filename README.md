@@ -28,7 +28,7 @@ cd calculator
 3. Install the dependencies:
 
 ```bash
-npm install
+npm install # node version used v18.20.1
 ```
 
 ## Usage

@@ -6,9 +6,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tHeStRyNg/calculator.git"
+  },
+  "keywords": [
+    "calculator",
+    "arithmetic",
+    "command-line"
+  ],
+  "author": "tHeStRyNg",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tHeStRyNg/calculator/issues"
+  },
+  "homepage": "https://github.com/tHeStRyNg/calculator#readme",
   "dependencies": {
-    "readline-sync": "^1.4.10"
+    "express": "^4.17.1"
   }
 }
