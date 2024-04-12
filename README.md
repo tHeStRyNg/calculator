@@ -16,7 +16,7 @@ To install this project, follow these steps:
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/your-username/calculator.git
+git clone https://github.com/tHeStRyNg/calculator.git
 ```
 
 2. Navigate to the project directory:
@@ -61,6 +61,7 @@ This is a snapshot of the project's directory structure:
 ├── package-lock.json    # Lock file for dependencies
 ├── package.json         # Package manifest file
 └── README.md            # Project description
+└── .gitignore           # Ignores cached dirs/files for git operations
 ```
 
 ## License
@@ -80,6 +81,6 @@ Contributions are always welcome! Please read the [contribution guidelines](CONT
 
 ## Contact
 
-If you have any questions or feedback, feel free to [open an issue](https://github.com/your-username/calculator/issues/new) or [contact me](mailto:your-email@example.com).
+If you have any questions or feedback, feel free to [open an issue](https://github.com/tHeStRyNg/calculator/issues/new) or [contact me](mailto:info@algorithmic.one).
 
 Thank you for visiting!
