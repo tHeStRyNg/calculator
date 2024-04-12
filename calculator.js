@@ -1,71 +1,55 @@
-// Import the readline-sync module
-const readline = require('readline-sync');
+// Import the express and body-parser modules
+const express = require('express');
+const bodyParser = require('body-parser');
 
-// Function to perform addition
-function add(x, y) {
-    return x + y;
-}
+// Create a new express application
+const app = express();
 
-// Function to perform subtraction
-function subtract(x, y) {
-    return x - y;
-}
+// Use body-parser to parse form data sent from the HTML form
+app.use(bodyParser.urlencoded({ extended: true }));
 
-// Function to perform multiplication
-function multiply(x, y) {
-    return x * y;
-}
+// Define a route for the homepage
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/calculator.html');
+});
 
-// Function to perform division
-function divide(x, y) {
-    if (y === 0) {
-        return "Error: Cannot divide by zero";
-    }
-    return x / y;
-}
+// Define a route for the calculator script
+app.get('/calculator.js', (req, res) => {
+  res.sendFile(__dirname + '/calculator.js');
+});
 
-// Function to get user input for two numbers
-function getUserInput() {
-    const num1 = parseFloat(readline.question('Enter the first number: '));
-    const num2 = parseFloat(readline.question('Enter the second number: '));
-    return { num1, num2 };
-}
+// Define a route for calculating the result
+app.post('/calculate', (req, res) => {
+  // Get the input values from the form
+  const num1 = parseFloat(req.body.num1);
+  const num2 = parseFloat(req.body.num2);
+  const operation = req.body.operation;
 
-// Main function to perform calculations
-function main() {
-    console.log('Simple Calculator');
-    console.log('-----------------');
+  // Perform the calculation based on the operation
+  let result;
+  switch (operation) {
+    case 'add':
+      result = num1 + num2;
+      break;
+    case 'subtract':
+      result = num1 - num2;
+      break;
+    case 'multiply':
+      result = num1 * num2;
+      break;
+    case 'divide':
+      result = num1 / num2;
+      break;
+    default:
+      res.send('Invalid operation');
+      return;
+  }
 
-    const { num1, num2 } = getUserInput();
+  // Send the result back to the HTML page
+  res.send(`Result: ${result}`);
+});
 
-    console.log('Select operation:');
-    console.log('1. Addition');
-    console.log('2. Subtraction');
-    console.log('3. Multiplication');
-    console.log('4. Division');
-    const choice = parseInt(readline.question('Enter your choice: '));
-
-    let result;
-    switch (choice) {
-        case 1:
-            result = add(num1, num2);
-            break;
-        case 2:
-            result = subtract(num1, num2);
-            break;
-        case 3:
-            result = multiply(num1, num2);
-            break;
-        case 4:
-            result = divide(num1, num2);
-            break;
-        default:
-            console.log('Invalid choice');
-            return;
-    }
-
-    console.log('Result:', result);
-}
-
-// Call the main function
-main();
+// Start the server and listen on port 3000
+app.listen(3000, () => {
+  console.log('Server listening on port 3000');
+});
