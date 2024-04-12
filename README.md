@@ -1,5 +1,3 @@
-Sure, here's how the updated README.md file should look like:
-
 # Calculator
 
 This is a simple command-line calculator that takes user input for two numbers and performs basic arithmetic operations (addition, subtraction, multiplication, and division).
@@ -35,4 +33,4 @@ The project was inspired by resources from freecodecamp.org and geeksforgeeks.or
 
 ## Contact
 
-For questions or feedback, you can open an issue or contact the author at info@algorithmic.one.
+For questions or feedback, you can open an issue or contact me at info@algorithmic.one.
