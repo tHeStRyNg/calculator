@@ -51,6 +51,23 @@ node calculator.js
 
 The calculator will display the result of the operation.
 
+4. Example
+
+```
+# node calculator.js
+Simple Calculator
+-----------------
+Enter the first number: 26
+Enter the second number: 33
+Select operation:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+Enter your choice: 1
+Result: 59
+```
+
 ## Project Structure
 
 This is a snapshot of the project's directory structure:
