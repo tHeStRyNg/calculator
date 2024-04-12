@@ -1,6 +1,7 @@
 # Calculator
 
 This is a simple command-line calculator that takes user input for two numbers and performs basic arithmetic operations (addition, subtraction, multiplication, and division).
+Later we integrated a web-server running on port 3000 which delivers the command-line calculator on a browser experience.
 
 ## Scope
 AI testing and Training for Code Development
