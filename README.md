@@ -26,9 +26,6 @@ To use the calculator, follow these steps:
 3. Open a web browser and navigate to http://localhost:3000 to see the calculator interface.
 4. Enter two numbers and select an operation from the dropdown menu.
 5. Click the "Calculate" button to see the result.
-6. Example
-
-![image](https://github.com/tHeStRyNg/calculator/assets/118682909/29c3ffbf-b7be-421a-b36f-9d6a0635fb99)
 
 ## Contributing
 
